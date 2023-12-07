@@ -60,7 +60,7 @@ public abstract class Program
             ThreadPool.QueueUserWorkItem(_ => service.SaveItem("b"));
             ThreadPool.QueueUserWorkItem(_ => service.SaveItem("c"));
 
-            //https://learn.microsoft.com/tr-tr/dotnet/api/system.threading.threadpool.queueuserworkitem?view=net-8.0
+            //https://learn.microsoft.com/en-us/dotnet/api/system.threading.threadpool.queueuserworkitem?view=net-8.0
             //P.S: You can add ManualResetEvent to your actions and you can call below function for wait all events
             //WaitHandle.WaitAll(ManualResetEventArray);
         }
