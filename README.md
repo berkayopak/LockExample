@@ -12,7 +12,8 @@
 
 ### 2 - Distributed System Scenario
 - Open a terminal window
-- Run "docker-compose build" command
+- Go to the folder where the docker-compose.yml file is located
+- (Optional) Run "docker-compose build" command
 - Run "docker-compose up" command
 
 ## Scenarios
