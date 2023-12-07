@@ -29,6 +29,6 @@
 **Solution Description:**
 - I used RedLock(Redis lock) package for distributed system scenario.
 
-**Iaknesses:**
+**Weaknesses:**
 - By using RedLock, project become dependent on redis. If there is a malfunction or delay in our Redis server, it becomes a factor that will affect the system.
 - I set an expiry parameter for RedLock, this parameter needs to be carefully considered and adjusted according to the situation. If we set the expiry time too low, there is a risk of expiring the lock before the transaction is completed. On the contrary, if we set the expiry time too high, in case of a problem in the process, an unwanted lock may occur on the item basis.
