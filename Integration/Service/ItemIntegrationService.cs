@@ -65,8 +65,15 @@ public sealed class ItemIntegrationService
             return new Result(true, $"Item with content {itemContent} saved with id {item.Id}");
         }
         //The lock is automatically released at the end of the using block
+        else
+        {
+            //Lock is already in use
+            if (redLock.Status == RedLockNet.RedLockStatus.Conflicted)
+                return new Result(false, $"RedLock conflicted. ItemContent = {itemContent}.");
+        }
 
-        return new Result(false, $"Some error occured due to redLock mechanism. ItemContent = {itemContent}.");
+        return new Result(false, "Some error occured due to redLock mechanism." +
+            $" ItemContent = {itemContent}. RedLock status = {redLock.Status}");
     }
 
     public List<Item> GetAllItems()
