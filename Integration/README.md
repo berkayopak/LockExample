@@ -7,7 +7,8 @@
 ## How to try
 
 ### 1 - Single Server Scenario
-- You can debug with visual studio
+- You can debug with Visual Studio(or any other IDE which supports dotnet project)
+- If you don't want to debug, you can just run with "dotnet run" command on terminal
 - Check "launchsettings.json" file on "Properties" folder for debug options
 
 ### 2 - Distributed System Scenario
